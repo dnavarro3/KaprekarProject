@@ -31,7 +31,7 @@ int isKaprekar(int n) {
 
   int i;
   long square = n * (long) n;
-  int numDigits = (int) log10(n) + 1;
+  int numDigits = (int) log10(square) + 1;
   long modulus = 1;
   //changed modulus variable from 0 to 1
   long first, second;
@@ -42,11 +42,11 @@ int isKaprekar(int n) {
     //increase the modulus by a factor of 10
     modulus *= 10;
 	//corrected modulus spelling
-
+	
     //split the square into two parts
     first = square / modulus;
     second = square % modulus;
-
+	
     //test if the split makes a Kaprekar number
     if(second > 0 &&
        first + second == n) {

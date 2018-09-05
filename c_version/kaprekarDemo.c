@@ -11,7 +11,7 @@ int main(int argc, char **argv) {
   }
 
   int n = atoi(argv[1]);
-
+	isKaprekar(n);
   if(isKaprekar(n)) {
     printf("%d is a Kaprekar Number!\n", n);
   } else {
